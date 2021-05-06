@@ -1,0 +1,281 @@
+/* color: #a67db8; 
+   #80ffdb
+*/
+/******************Animation ******************/
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+/**
+** Logo caroussel
+*/
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(calc(-250px * 8));
+  }
+}
+.slider {
+  background: white;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.089);
+  height: 100px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 960px;
+}
+.slider::before,
+.slider::after {
+  background: linear-gradient(to right, white 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: calc(250px * 14);
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+/***************** Global ************************/
+body {
+  color: #666;
+}
+h2 {
+  font-size: 25px;
+  text-align: center;
+  color: #8924b4;
+  margin-bottom: 20px;
+}
+
+/**************** Classes / id ******************/
+#logo {
+  width: 150px;
+}
+.bouton {
+  border: solid white 2px;
+  padding: 5px 20px;
+  border-radius: 20px;
+  transition: all 0.5s ease;
+}
+.bouton:hover {
+  background-color: #8924b4;
+  border: 2px solid #8924b4;
+}
+.bouton2 {
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin: 0 auto;
+  border: 2px solid #8924b4;
+  color: #8924b4 !important;
+  transition: all 0.5s ease;
+}
+.bouton2:hover {
+  background-color: #8924b4;
+  color: #fff !important;
+}
+
+.gradient-background {
+  background: linear-gradient(#80ffdbe0, #a67db8f3);
+  background-size: cover;
+  background-position: center;
+}
+/****************** Preheader ********************/
+.preheader ul {
+  display: flex;
+  justify-content: flex-end;
+  margin: 0;
+}
+.preheader ul li {
+  margin-left: 20px;
+  font-size: 18px;
+}
+.preheader ul li a {
+  color: #8924b4;
+  transition: all 0.5s ease;
+}
+.preheader ul li a:hover {
+  color: #fff;
+  animation: ;
+}
+/****************** Header ***********************/
+header {
+  background: linear-gradient(#80ffdbe0, #a67db8f3), url(../img/ordinateur.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding-bottom: 80px;
+}
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
+.navbar ul {
+  display: flex;
+}
+.navbar ul li {
+  margin-left: 20px;
+}
+.navbar ul a:hover {
+  color: #8924b4;
+}
+header h1 span {
+  font-size: 40px;
+}
+header h1 {
+  margin: 150px 0 80px 0;
+  font-size: 30px;
+  animation-duration: 3s;
+  animation-name: slidein;
+  /* animation-iteration-count: 5s; */
+}
+/*************** A propos ********************/
+#about {
+  align-items: center;
+}
+#about p {
+  margin-bottom: 20px;
+}
+#about img {
+  width: 220px;
+}
+/************  Mes compétences  ***************/
+.skills-row {
+  justify-content: space-around;
+}
+.card {
+  border: 2px solid #a67db8a1;
+  border-radius: 5px;
+}
+.card hr {
+  background-color: #b212f7;
+  height: 2px;
+}
+#skills img:hover {
+  /*transform: scale(1.1);*/
+  transform: scaleX(-1);
+}
+#ecosysteme img {
+  width: 80px;
+}
+/**************** Formulaire ******************/
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: 10px;
+  border: solid 1px #fff;
+  background-color: #ffffff50;
+}
+label {
+  display: flex;
+  margin-bottom: 0.5rem;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+input[type="submit"] {
+  color: white;
+  background-color: transparent;
+}
+/*****************************
+*   Galerie Mes Creations    *
+******************************/
+.myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.myImg:hover {
+  opacity: 0.8;
+  transform: scale(1.009);
+}
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  /*background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.8); /* Black w/ opacity */
+}
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 90%;
+  max-width: 700px;
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+/* Add Animation */
+.modal-content,
+#caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+@keyframes zoom {
+  from {
+    transform: scale(0.1);
+  }
+  to {
+    transform: scale(1);
+  }
+}
