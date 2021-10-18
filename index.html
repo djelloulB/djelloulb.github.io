@@ -13,6 +13,12 @@
     <link rel="icon" href="img/logo.png" type="image/png">
     <script src="js/main.js" defer></script>
     <script src="https://kit.fontawesome.com/35ec662076.js" crossorigin="anonymous" defer></script>
+    <script
+  src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="js/menu.js"></script>
+  
 </head>
 <body>
     <header >
@@ -27,7 +33,7 @@
             </nav>
             <div class="navbar">
                 <a href="index.html"><img id="logo"src="img/logo.png" alt="mon logo"></a>
-                <nav>
+                <nav id='mainNav'>
                     <ul >
                         <li><a href="#about">A propos</a></li>
                         <li><a href="#skills">Mes compétences</a></li>
@@ -35,6 +41,7 @@
                         <li><a href="#contact">Contact</a></li>
                     </ul>
                 </nav>
+                <button class="hamburger" id="menuToggle"><i class="fas fa-bars"></i></button>
             </div>
             <h1>Djelloul Berabez <br /><span>Développeur Full-Stack</span></h1>
             <a class="bouton" href="#contact">Me contacter</a>

@@ -149,14 +149,38 @@ header {
   display: flex;
   justify-content: space-between;
 }
-.navbar ul {
+#mainNav {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.418);
+    width: 100%;
+    top: 90px;
+    padding-bottom: 10px;
+    display: none;
+}
+#mainNav ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
+  flex-flow: column nowrap;
+  margin-left: 90px;
 }
 .navbar ul li {
   margin-left: 20px;
 }
 .navbar ul a:hover {
   color: #8924b4;
+}
+#logo {
+  align-self: start;
+  margin-right: auto;
+}
+#menuToggle{
+  background-color: transparent;
+  border:none;
+  color: #8924b4;
+  align-self: start;
+  margin-left: auto;
 }
 header h1 span {
   font-size: 40px;
@@ -284,4 +308,24 @@ input[type="submit"] {
   to {
     transform: scale(1);
   }
+}
+@media screen and (min-width: 768px) {
+  #menuToggle{
+    display: none;
+  }
+
+  #mainNav{
+    position: static;
+    background: transparent;
+    display: flex !important;
+    padding: 0;
+    justify-content: flex-end;
+}
+  #mainNav ul{
+    flex-flow: row nowrap;
+    margin-left: 0px;
+}
+  #mainNav a{
+    font-size: 1.2em;
+} 
 }
