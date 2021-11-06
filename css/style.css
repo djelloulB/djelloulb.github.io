@@ -32,7 +32,7 @@
   margin: auto;
   overflow: hidden;
   position: relative;
-  width: 960px;
+  max-width: 1080px;
 }
 .slider::before,
 .slider::after {
@@ -55,13 +55,16 @@
 .slider .slide-track {
   animation: scroll 40s linear infinite;
   display: flex;
-  width: calc(250px * 14);
+  width: calc(250px * 15);
 }
 .slider .slide {
   height: 100px;
   width: 250px;
 }
-
+.slide img {
+    width: 220px;
+    
+}
 /***************** Global ************************/
 body {
   color: #666;
@@ -89,7 +92,7 @@ h2,
 }
 /**************** Classes / id ******************/
 #logo {
-  width: 150px;
+  height: 50px;
 }
 .bouton {
   border: solid white 2px;
@@ -152,9 +155,9 @@ header {
 }
 #mainNav {
     position: absolute;
-    background-color: rgba(0, 0, 0, 0.418);
+    background-color:#a67db896;
     width: 100%;
-    top: 90px;
+    top: 30px;
     padding-bottom: 10px;
     display: none;
 }
@@ -218,9 +221,7 @@ header h1 {
   /*transform: scale(1.1);*/
   transform: scaleX(-1);
 }
-#ecosysteme img {
-  width: 80px;
-}
+
 /**************** Formulaire ******************/
 
 input[type="text"],
