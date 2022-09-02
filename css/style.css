@@ -202,9 +202,10 @@ header h1 {
 #about p {
   margin-bottom: 20px;
 }
-#about img {
+
+/* #about img {
   width: 220px;
-}
+} */
 /************  Mes compétences  ***************/
 .skills-row {
   justify-content: space-around;
